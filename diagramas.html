@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Fundamentals Evaluation</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="/index.html">
+            <img
+                src="assets/images/codeable-logo-sm.svg"
+                alt="codeable-logo"
+                width="135"
+                height="32"
+                class="header__logo"
+            />
+            </a>
+            <nav class="navigation">
+            <ul>
+                <li class="active"><a href="/diagramas.html">Diagramas VV</a></li>
+                <li><a href="/funciones.html">Funciones</a></li>
+                <li><a href="/dom.html">Manipulación del DOM</a></li>
+            </ul>
+            </nav>
+            <p class="header__name">Carlos A. Garcia Gonzales</p>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Diagramas VV</h1>
+            
+            <h2>Instrucciones</h2>
+            <p>Dibuja el estado del diagrama de variables y valores para cada momento indicado por el ejercicio. Añade una imagen del diagrama al documento. El diagrama deberá contener únicamente las variables y valores que permanecen en la memoria. Luego contesta las preguntas dejando marcado (checked) el radio button o el/los checkboxes correspondientes.</p>
+
+            
+            <h2>Ejercicios</h2>
+
+
+            <h3>Ejercicio 1</h3>
+            <p>Analiza el siguiente código y dibuja el diagrama VV al terminar de ejecutarse</p>
+            <pre>
+<code>const juan = {
+    nombre: "Juan",
+    edad: 25,
+    residencia: {
+        direccion: "Loma Hermosa 240",
+        ciudad: "Lima",
+        pais: "Peru",
+    },
+};
+    
+const sandra = {
+    nombre: "Sandra",
+    edad: 25,
+    residencia: {
+        direccion: "Loma Hermosa 240",
+        ciudad: "Lima",
+        pais: "Peru",
+    },
+};</code></pre>
+            <figure>
+                <img class="answercolor" src="/assets/diagrams/diagrama-1.png" id="image-1" />
+                <figcaption>Diagrama al final de la ejecución</figcaption>
+            </figure>
+
+            <form>
+                <label>La expresión `juan.edad === sandra.edad` retorna</label>
+                <button class="information" data-tooltip="/assets/diagrams/diagrama-1-1.png" origin="image-1"></button>
+                <ul>
+                    <li>
+                        <label for="ejercicio1-pregunta1-respuesta1">
+                            <input type="radio" id="ejercicio1-pregunta1-respuesta1" name="ejercicio1-pregunta1" checked>
+                            true
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio1-pregunta1-respuesta2">
+                            <input type="radio" id="ejercicio1-pregunta1-respuesta2" name="ejercicio1-pregunta1" >
+                            false
+                        </label>
+                    </li>
+                </ul>
+
+                <label>La expresión `juan.residencia === sandra.residencia` retorna</label>
+                <button class="information" data-tooltip="/assets/diagrams/diagrama-1-2.png" origin="image-1"></button>
+                <ul>
+                    <li>
+                        <label for="ejercicio1-pregunta2-respuesta1">
+                            <input type="radio" id="ejercicio1-pregunta2-respuesta1" name="ejercicio1-pregunta2" >
+                            true
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio1-pregunta2-respuesta2">
+                            <input type="radio" id="ejercicio1-pregunta2-respuesta2" name="ejercicio1-pregunta2" checked>
+                            false
+                        </label>
+                    </li>
+                </ul>
+
+                <label>La expresión `juan.residencia.ciudad === sandra.residencia.ciudad` retorna</label>
+                <button class="information" data-tooltip="/assets/diagrams/diagrama-1-3.png" origin="image-1"></button>
+                <ul>
+                    <li>
+                        <label for="ejercicio1-pregunta3-respuesta1">
+                            <input type="radio" id="ejercicio1-pregunta3-respuesta1" name="ejercicio1-pregunta3" checked>
+                            true
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio1-pregunta3-respuesta2">
+                            <input type="radio" id="ejercicio1-pregunta3-respuesta2" name="ejercicio1-pregunta3" >
+                            false
+                        </label>
+                    </li>
+                </ul>
+            </form>
+
+            <h3>Ejercicio 2</h3>
+            <p>Analiza el siguiente código y dibuja el diagrama VV al terminar de ejecutarse</p>
+            <pre>
+<code>const objeto1 = {};
+const objeto2 = { b: 5 };
+const objeto3 = { a: 10 };
+
+objeto1.a = objeto3.a;
+objeto2.a = objeto1.a + 5;
+objeto3.b = objeto1.b;
+objeto1.b = 10;</code></pre>
+            <figure>
+                <img class="answercolor" src="/assets/diagrams/diagrama-2.png" id="image-2" />
+                <figcaption>Diagrama al final de la ejecución</figcaption>
+            </figure>
+
+            <form>
+                <label>La expresión `objeto1.a + objeto2.b === objeto2.a` retorna</label>
+                <button class="information" data-tooltip="/assets/diagrams/diagrama-2-1.png" origin="image-2"></button>
+                <ul>
+                    <li>
+                        <label for="ejercicio2-pregunta1-respuesta1">
+                            <input type="radio" id="ejercicio2-pregunta1-respuesta1" name="ejercicio2-pregunta1" checked>
+                            true
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio2-pregunta1-respuesta2">
+                            <input type="radio" id="ejercicio2-pregunta1-respuesta2" name="ejercicio2-pregunta1" >
+                            false
+                        </label>
+                    </li>
+                </ul>
+
+                <label>El valor de `objeto3.b` es</label>
+                <button class="information" data-tooltip="/assets/diagrams/diagrama-2-2.png" origin="image-2"></button>
+                <ul>
+                    <li>
+                        <label for="ejercicio2-pregunta2-respuesta1">
+                            <input type="radio" id="ejercicio2-pregunta2-respuesta1" name="ejercicio2-pregunta2" >
+                            5
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio2-pregunta2-respuesta2">
+                            <input type="radio" id="ejercicio2-pregunta2-respuesta2" name="ejercicio2-pregunta2" >
+                            10
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio2-pregunta2-respuesta3">
+                            <input type="radio" id="ejercicio2-pregunta2-respuesta3" name="ejercicio2-pregunta2" >
+                            null
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio2-pregunta2-respuesta4">
+                            <input type="radio" id="ejercicio2-pregunta2-respuesta4" name="ejercicio2-pregunta2" checked>
+                            undefined
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio2-pregunta2-respuesta5">
+                            <input type="radio" id="ejercicio2-pregunta2-respuesta5" name="ejercicio2-pregunta2" >
+                            Error
+                        </label>
+                    </li>
+                </ul>
+
+                <label>La expresión `objeto1.a === objeto1.b` retorna</label>
+                <button class="information" data-tooltip="/assets/diagrams/diagrama-2-3.png" origin="image-2"></button>
+                <ul>
+                    <li>
+                        <label for="ejercicio2-pregunta3-respuesta1">
+                            <input type="radio" id="ejercicio2-pregunta3-respuesta1" name="ejercicio2-pregunta3" checked>
+                            true
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio2-pregunta3-respuesta2">
+                            <input type="radio" id="ejercicio2-pregunta3-respuesta2" name="ejercicio2-pregunta3" >
+                            false
+                        </label>
+                    </li>
+                </ul>
+            </form>
+
+            <h3>Ejercicio 3</h3>
+            <p>Analiza el siguiente código y dibuja un diagrama VV para cada uno de los momentos indicados. Recuerda que una función es un valor representado por el símbolo `( )`. No es necesario escribir el contenido de la función en el diagrama.</p>
+            <pre>
+<code>function agregar(arreglo, valor) {
+    return arreglo.push(valor);
+}
+
+const frutas = ["pera", "manzana"];
+
+const resultado = agregar(frutas, "durazno");
+
+// Punto A: dibuja el diagrama en este punto
+
+const copia = frutas;
+
+agregar(copia, "platano");
+
+// Punto B: dibuja el diagrama en este punto</code></pre>
+            <figure>
+                <img class="answercolor" src="/assets/diagrams/diagrama-3a.png" id="image-3a" />
+                <figcaption>Diagrama en punto A</figcaption>
+            </figure>
+
+            <figure>
+                <img class="answercolor" src="/assets/diagrams/diagrama-3b.png" id="image-3b" />
+                <figcaption>Diagrama en punto B</figcaption>
+            </figure>
+
+            <form>
+                <label>El valor de resultado `resultado` es</label>
+                <button class="information" data-tooltip="/assets/diagrams/diagrama-3b-1.png" origin="image-3b"></button>
+                    <ul>
+                    <li>
+                        <label for="ejercicio3-pregunta1-respuesta1">
+                            <input type="radio" id="ejercicio3-pregunta1-respuesta1" name="ejercicio3-pregunta1" >
+                            ['pera', 'manzana', 'durazno']
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio3-pregunta1-respuesta2">
+                            <input type="radio" id="ejercicio3-pregunta1-respuesta2" name="ejercicio3-pregunta1" >
+                            'durazno'
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio3-pregunta1-respuesta3">
+                            <input type="radio" id="ejercicio3-pregunta1-respuesta3" name="ejercicio3-pregunta1" checked>
+                            3
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio3-pregunta1-respuesta4">
+                            <input type="radio" id="ejercicio3-pregunta1-respuesta4" name="ejercicio3-pregunta1" >
+                            4
+                        </label>
+                    </li>
+                </ul>
+
+                <label>El valor de `frutas.length` en el Punto B es</label>
+                <button class="information" data-tooltip="/assets/diagrams/diagrama-3b-2.png" origin="image-3b"></button>
+                <ul>
+                    <li>
+                        <label for="ejercicio3-pregunta2-respuesta1">
+                            <input type="radio" id="ejercicio3-pregunta2-respuesta1" name="ejercicio3-pregunta2" >
+                            2
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio3-pregunta2-respuesta2">
+                            <input type="radio" id="ejercicio3-pregunta2-respuesta2" name="ejercicio3-pregunta2" >
+                            3
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio3-pregunta2-respuesta3">
+                            <input type="radio" id="ejercicio3-pregunta2-respuesta3" name="ejercicio3-pregunta2" checked>
+                            4
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio3-pregunta2-respuesta4">
+                            <input type="radio" id="ejercicio3-pregunta2-respuesta4" name="ejercicio3-pregunta2">
+                            undefined
+                        </label>
+                    </li>
+                </ul>
+            </form>
+
+            <h3>Ejercicio 4</h3>
+            <p>Analiza el siguiente código y dibuja un diagrama VV al finalizar la ejecución. Recuerda que una función es un valor representado por el símbolo `( )`. No es necesario escribir el contenido de la función en el diagrama.</p>
+            <pre>
+<code>function Persona(nombre) {
+    this.nombre = nombre;
+}
+
+Persona.prototype.presentarse = function () {
+    return `Hola, mi nombre es ${this.nombre}`;
+};
+
+function Mago(nombre, casa) {
+    Persona.call(this, nombre);
+    this.casa = casa;
+}
+
+Mago.prototype = Object.create(Persona.prototype);
+Mago.prototype.constructor = Mago;
+
+Mago.prototype.invocarHechizo = function () {
+    return `${this.nombre} invoca un hechizo`;
+};
+
+const petunia = new Persona("Petunia");
+const harry = new Mago("Harry", "Gryffindor");</code></pre>
+            <figure>
+                <img class="answercolor" src="/assets/diagrams/diagrama-4.png" id="image-4" />
+                <figcaption>Diagrama al final de la ejecución</figcaption>
+            </figure>
+
+            <form>
+                <label>Marca todas las correctas</label>
+                <ul>
+                    <li>
+                        <label for="ejercicio4-pregunta1-respuesta1">
+                            <input type="checkbox" id="ejercicio4-pregunta1-respuesta1" name="ejercicio4-pregunta1" checked>
+                            `Persona` y `Mago` son funciones constructoras
+                            <button class="information" data-tooltip="/assets/diagrams/diagrama-4-1a.png" origin="image-4"></button>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio4-pregunta1-respuesta2">
+                            <input type="checkbox" id="ejercicio4-pregunta1-respuesta2" name="ejercicio4-pregunta1" >
+                            El prototipo de `harry` es `petunia`
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio4-pregunta1-respuesta3">
+                            <input type="checkbox" id="ejercicio4-pregunta1-respuesta3" name="ejercicio4-pregunta1" checked>
+                            Los objetos creado con la función `Mago` tienen acceso al método `presentarse`
+                            <button class="information" data-tooltip="/assets/diagrams/diagrama-4-1c.png" origin="image-4"></button>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio4-pregunta1-respuesta4">
+                            <input type="checkbox" id="ejercicio4-pregunta1-respuesta4" name="ejercicio4-pregunta1">
+                            El uso de la palabra `new` es opcional
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio4-pregunta1-respuesta5">
+                            <input type="checkbox" id="ejercicio4-pregunta1-respuesta5" name="ejercicio4-pregunta1" checked>
+                            Solo el objeto `harry` tiene acceso al método `invocarHechizo`
+                            <button class="information" data-tooltip="/assets/diagrams/diagrama-4-1e.png" origin="image-4"></button>
+                        </label>
+                    </li>
+                </ul>
+
+                <label>`harry` es una instancia de `Persona`</label>
+                <button class="information" data-tooltip="/assets/diagrams/diagrama-4-2.png" origin="image-4"></button>
+                <ul>
+                    <li>
+                        <label for="ejercicio4-pregunta2-respuesta1">
+                            <input type="radio" id="ejercicio4-pregunta2-respuesta1" name="ejercicio4-pregunta2"checked>
+                            true
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio4-pregunta2-respuesta2">
+                            <input type="radio" id="ejercicio4-pregunta2-respuesta2" name="ejercicio4-pregunta2">
+                            false
+                        </label>
+                    </li>
+                </ul>
+
+                <label>La expresión `harry.invocarHechizo.call(petunia)` retorna</label>
+                <button class="information" data-tooltip="/assets/diagrams/diagrama-4-3.png" origin="image-4"></button>
+                <ul>
+                    <li>
+                        <label for="ejercicio4-pregunta3-respuesta1">
+                            <input type="radio" id="ejercicio4-pregunta3-respuesta1" name="ejercicio4-pregunta3" >
+                            'Harry invoca un hechizo'
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio4-pregunta3-respuesta2">
+                            <input type="radio" id="ejercicio4-pregunta3-respuesta2" name="ejercicio4-pregunta3" checked>
+                            'Petunia invoca un hechizo'
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ejercicio4-pregunta3-respuesta3">
+                            <input type="radio" id="ejercicio4-pregunta3-respuesta3" name="ejercicio4-pregunta3">
+                            Error
+                        </label>
+                    </li>
+                </ul>
+            </form>
+
+            <p>Re-escribe el código usando la sintaxis de Clases de JavaScript</p>
+
+            <pre class="answercolor"><code>class Persona{
+    constructor(nombre){
+        this.nombre = nombre;
+    }
+    presentarse(){
+        return `Hola, mi nombre es ${this.nombre}`;    
+    }
+}
+
+class Mago extends Persona{
+    constructor(nombre,casa){
+        super(nombre);
+        this.casa = casa;
+    }
+    invocarHechizo(){
+        return `${this.nombre} invoca un hechizo`;
+    }
+}
+
+const petunia = new Persona("Petunia");
+const harry = new Mago("Harry", "Gryffindor");</code></pre>
+        </section>
+    </main>
+
+    <script src="diagramas.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+/*
+<header class="header container">
+  <h1 class="header__logo"><a href="">Logo</a></h1>
+  <nav class="header__navigation navigation">...</nav>
+  <div class="header__actions">...</div>
+  <button class="header__menu-icon button button--icon button--outline">
+    <svg>...</svg>
+  </button>
+</header>
+
+<header class="header">
+    <div class="container header__container">
+        <a href="/index.html">
+        <img
+            src="assets/images/codeable-logo-sm.svg"
+            alt="codeable-logo"
+            width="135"
+            height="32"
+            class="header__logo"
+        />
+        </a>
+        <nav class="navigation">
+        <ul>
+            <li class="active"><a href="/diagramas.html">Diagramas VV</a></li>
+            <li><a href="/funciones.html">Funciones</a></li>
+            <li><a href="/dom.html">Manipulación del DOM</a></li>
+        </ul>
+        </nav>
+        <p class="header__name">Carlos A. Garcia Gonzales</p>
+    </div>
+</header>
+*/
+
+.header {
+    position: sticky;
+    /* Tome como referencia el estilo del sidebar de la página de Codeable */
+    background: rgba(255 255 255/90%);
+    backdrop-filter: blur(5px);
+    top: 0px;
+}
+
+.header__container {
+    height: var(--hug);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 32px;
+    align-self: baseline;
+}
+
+.header__logo {
+    margin-left: var(--hug);
+}
+
+.header__name {
+    margin-right: var(--hug);
+    align-self: baseline;
+}

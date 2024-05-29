@@ -1,0 +1,8 @@
+.centered-content {
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}

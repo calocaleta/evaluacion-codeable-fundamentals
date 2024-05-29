@@ -1,0 +1,4 @@
+.answercolor {
+    border-color: var(--answer-color);
+    background-color: var(--answer-background-color);
+}

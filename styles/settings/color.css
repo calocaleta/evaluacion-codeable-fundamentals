@@ -1,0 +1,42 @@
+:root {
+  /* Base Colors */
+
+  --black-primary: #171717;
+  --black-secondary: #525252;
+  --gray-primary: #757575;
+  --gray-secondary: #F5F5F5;
+  --gray-tertiary: #D4D4D4;
+  --white-primary: #FFFFFF;
+  --purple-primary: #6D28D9;
+  --purple-secondary: #8D46FF;
+  --purple-tertiary: #351c5c;
+  --red-primary: #DC2626;
+
+
+
+  /* Color Tokens */
+  --foreground: var(--black-primary);
+  --muted-foreground: var(--black-secondary);
+  --content-headings: var(--black-primary);
+  --content-body: var(--black-primary);
+  --content-captions: var(--black-secondary);
+  --content-links: var(--purple-primary);
+  --content-markers: var(--purple-primary);
+
+  --border-color: var(--gray-tertiary);
+  --border-radio: var(--gray-primary);
+  --border-checkbox: var(--gray-primary);
+
+  --answer-color: var(--purple-secondary);
+  --answer-background-color: var(--purple-tertiary);
+
+  --button-foreground: var(--purple-primary);
+  --button-foreground-hover: var(--purple-secondary);
+  --button-disabled: var(--gray-primary);
+  --button-textcolor: var(--white-primary);
+
+  --muted: var(--gray-secondary);
+  --background-active: var(--gray-secondary);
+
+  --danger-border: var(--red-primary);
+}

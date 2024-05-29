@@ -1,0 +1,21 @@
+/* Sections */
+.section-sm {
+    padding-block: var(--spacing-6);
+}
+
+.section {
+    padding-block: var(--spacing-12);
+}
+
+.section-lg {
+    padding-block: var(--spacing-24);
+}
+
+.section-xl {
+    padding-block: var(--spacing-36);
+}
+
+/* Container */
+.container {
+    width: 100%;
+}

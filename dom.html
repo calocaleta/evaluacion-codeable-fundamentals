@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Fundamentals Evaluation</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="/index.html">
+            <img
+                src="assets/images/codeable-logo-sm.svg"
+                alt="codeable-logo"
+                width="135"
+                height="32"
+                class="header__logo"
+            />
+            </a>
+            <nav class="navigation">
+            <ul>
+                <li><a href="/diagramas.html">Diagramas VV</a></li>
+                <li><a href="/funciones.html">Funciones</a></li>
+                <li class="active"><a href="/dom.html">Manipulación del DOM</a></li>
+            </ul>
+            </nav>
+            <p class="header__name">Carlos A. Garcia Gonzales</p>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Manipulación del DOM</h1>
+            
+            <h2>Instrucciones</h2>
+            <p>Sigue las instrucciones y crea componentes web utilizando JavaScript, manipulando el DOM, escuchando eventos e implementando persistencia con localStorage.</p>
+
+            
+            <h2>Crea un 'Tooltip'</h2>
+            <p>Un Tooltip es un pequeño cuadro de información que aparece cuando pasas el cursor sobre un elemento en una interfaz gráfica de usuario. Este cuadro ofrece detalles adicionales sobre la función del elemento, proporcionando así una ayuda contextual. Por ejemplo, si pasas el cursor sobre un botón que guarda cambios en una aplicación, un Tooltip podría aparecer con el texto "Guardar", para clarificar qué hace ese botón. Los Tooltips son útiles para mejorar la experiencia del usuario, ya que proporcionan orientación sin requerir que se desplace a otra sección para obtener más información.</p>
+
+            <h3>Requerimiento</h3>
+            <p>Tu tarea es crear un Tooltip, un pequeño elemento emergente que proporciona información adicional cuando el usuario pasa el cursor sobre un elemento. Utilizarás JavaScript para manipular el DOM y crear este componente.</p>
+            <ul>
+                <li>
+                    <b>Elemento Objetivo:</b> El elemento sobre el cual aparecerá el Tooltip será cualquier elemento que tenga un atributo `data-tooltip` definido.
+                </li>
+                <li>
+                    <b>Contenido del Tooltip:</b> El valor del atributo será el mensaje que aparecerá en el Tooltip. Por ejemplo, un elemento con el atributo `data-tooltip="Grabar"` mostrará el texto "Grabar" como contenido del Tooltip.
+                </li>
+                <li>
+                    <b>Posicionamiento:</b> El Tooltip debe aparecer encima del elemento objetivo.
+                </li>
+                <li>
+                    <b>Estilo:</b> Sigue el diseño especificado en Figma para dar estilo al Tooltip
+                </li>
+                <li>
+                    <b>Interacción:</b> El Tooltip debe mostrarse cuando el usuario pase el cursor sobre el elemento objetivo y desaparecer cuando el cursor se mueva fuera del elemento. Pero no lo debe hacer inmediato. El mouse debe mantenerse por encima del elemento objetivo durante 300ms para luego mostrar el Tooltip. Si el cursor sale del elemento objetivo antes de cumplirse los 300ms, el Tooltip no debe mostrarse.
+                </li>
+            </ul>
+
+            <h3>Demo</h3>
+            <p>A continuación, presenta una demostración del Tooltip.</p>
+
+<pre><code>&lt;button data-tooltip="¡Funciona! 😄"&gt;Tooltip&lt;/button&gt;</code></pre>
+
+            <div class="panel-script">
+                <button data-tooltip="¡Funciona! 😀">Tooltip</button>
+            </div>
+
+            <h2>Crea un Formulario con Validación en tiempo real</h2>
+            <p>El objetivo de este ejercicio es crear un formulario HTML que realice validaciones en tiempo real utilizando JavaScript, persista el progreso usando localStorage y procese el envío usando JavaScript para mostrar un mensaje con la respuesta del servidor.</p>
+
+            <h3>Requerimientos</h3>
+
+            <h4>Campos del formulario:</h4>
+            <ul>
+                <li>
+                    <b>Nombre:</b> Un input obligatorio
+                </li>
+                <li>
+                    <b>Apodo:</b> Un input obligatorio de entre 3 y 10 caracteres. Solo debe aceptar caracteres alfanuméricos. Estos son letras (a-z) o (A-Z), dígitos (0-9).
+                </li>
+                <li>
+                    <b>Biografía:</b> Textarea opcional, pero si se llena, deberá tener mínimo 100 caracteres.
+                </li>
+                <li>
+                    <b>Contraseña:</b> Un input obligatorio de mínimo 8 caracteres, al menos una letra mayúscula y un número.
+                </li>
+            </ul>
+
+            <h4>Validación en Tiempo Real</h4>
+            <ul>
+                <li>
+                    Valida el contenido de cada campo inmediatamente cuando el usuario comienza a escribir en él.
+                </li>
+                <li>
+                    Muestra un mensaje de error debajo del campo cuando no pasa la validación.
+                </li>
+                <li>
+                    El mensaje de error debe desaparecer cuando el campo sea válido.
+                </li>
+            </ul>
+
+            <h4>Persistencia</h4>
+            <ul>
+                <li>
+                    Guarda el progreso del usuario en el `localStorage` cada vez que se valide un campo (no queremos guardar datos inválidos)
+                </li>
+                <li>
+                    Al recargar la página, el formulario debe recuperar el estado guardado del `localStorage`.
+                </li>
+                <li>
+                    El campo Contraseña contiene datos sensibles por lo tanto no debe almacenarse en `localStorage`
+                </li>
+            </ul>
+
+            <h4>Envío del Formulario</h4>
+            <ul>
+                <li>
+                    El botón para enviar el formulario debe estar deshabilitado hasta que todos los campos sean válidos.
+                </li>
+                <li>
+                    Al hacer clic en enviar, simula una petición al servidor utilizando JavaScript. El método debe ser POST, la URL será el servicio echo '​https://mocktarget.apigee.net/echo'. Deberá tener el header Content-Type adecuado.
+                </li>
+                <li>
+                    Biografía: Textarea opcional, pero si se llena, deberá tener mínimo 100 caracteres.
+                </li>
+                <li>
+                    Luego de procesar la respuesta, añade un elemento debajo del formulario que muestre la respuesta del servidor en formato JSON.
+                </li>
+            </ul>
+
+            <h3>Demo</h3>
+            <p>A continuación, presenta una demostración del Formulario con validación.</p>
+
+<pre><code>&lt;form class="panel-script__form" name="register" id="register"&gt;
+    &lt;fieldset class="panel-script__fieldset"&gt;
+        &lt;label class="panel-script__label" for="nombre"&gt;Nombre *&lt;/label&gt;
+        &lt;input class="panel-script__input" type="text" id="nombre" name="nombre" /&gt;
+        &lt;span class="panel-script__help-text" id="nombre_help"&gt;Mínimo 3 caracteres alfabéticos&lt;/span&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset class="panel-script__fieldset"&gt;
+        &lt;label class="panel-script__label" for="apodo"&gt;Apodo *&lt;/label&gt;
+        &lt;input class="panel-script__input" type="text" id="apodo" name="apodo" /&gt;
+        &lt;span class="panel-script__help-text" id="apodo_help"&gt;Entre 3 y 10 caracteres alfanuméricos&lt;/span&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset class="panel-script__fieldset"&gt;
+        &lt;label class="panel-script__label" for="biografia"&gt;Biografía&lt;/label&gt;
+        &lt;textarea class="panel-script__textarea" rows="3" id="biografia" name="biografia"&gt;&lt;/textarea&gt;
+        &lt;span class="panel-script__help-text" id="biografia_help"&gt;Mínimo 100 caracteres&lt;/span&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset class="panel-script__fieldset"&gt;
+        &lt;label class="panel-script__label" for="password"&gt;Contraseña *&lt;/label&gt;
+        &lt;input class="panel-script__input" type="password" id="password" name="password" /&gt;
+        &lt;span class="panel-script__help-text" id="password_help"&gt;Mínimo 8 caracteres, al menos una letra mayúscula y un número&lt;/span&gt;
+    &lt;/fieldset&gt;
+
+    &lt;button class="panel-script__button" type="submit" id="submit" name="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+
+&lt;pre class="answercolor panel-script__response" id="showresponse" name="showresponse"&gt;&lt;code id="result" name="result" &gt;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+
+            <div class="panel-script">
+                <form class="panel-script__form" name="register" id="register">
+                    <fieldset class="panel-script__fieldset">
+                        <label class="panel-script__label" for="nombre">Nombre *</label>
+                        <input class="panel-script__input" type="text" id="nombre" name="nombre" />
+                        <span class="panel-script__help-text" id="nombre_help">Mínimo 3 caracteres alfabéticos</span>
+                    </fieldset>
+
+                    <fieldset class="panel-script__fieldset">
+                        <label class="panel-script__label" for="apodo">Apodo *</label>
+                        <input class="panel-script__input" type="text" id="apodo" name="apodo" />
+                        <span class="panel-script__help-text" id="apodo_help">Entre 3 y 10 carateres alfanuméricos</span>
+                    </fieldset>
+
+                    <fieldset class="panel-script__fieldset">
+                        <label class="panel-script__label" for="biografia">Biografia</label>
+                        <textarea class="panel-script__textarea" rows="3" id="biografia" name="biografia"></textarea>
+                        <span class="panel-script__help-text" id="biografia_help">Mínimo 100 caracteres</span>
+                    </fieldset>
+                    
+                    <fieldset class="panel-script__fieldset">
+                        <label class="panel-script__label" for="password">Contraseña *</label>
+                        <input class="panel-script__input" type="password" id="password" name="password" />
+                        <span class="panel-script__help-text" id="password_help">Mínimo 8 carateres, al menos una letra mayúscula y un número</span>
+                    </fieldset>
+
+                    <button class="panel-script__button" type="submit" id="submit" name="submit">Enviar</button>
+
+                </form>
+
+<pre class="answercolor panel-script__response" id="showresponse" name="showresponse"><code id="result" name="result" ></code></pre>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="dom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+/*
+<div class="container home">
+    <img
+        src="assets/images/codeable-logo.svg"
+        alt="Codeable Logo"
+        width="270"
+        height="64"
+        class="home__logo"
+    />
+    <h1 class="home__title">Web Fundamentals</h1>
+    <h2 class="home__subtitle">Evaluación Individual</h2>
+    <h3 class="home__name">Carlos A. Garcia Gonzales</h3>
+    <nav class="navigation">
+        <ul>
+        <li><a href="/diagramas.html">Diagramas VV</a></li>
+        <li><a href="/funciones.html">Funciones</a></li>
+        <li><a href="/dom.html">Manipulación del DOM</a></li>
+        </ul>
+    </nav>
+</div>
+*/
+
+.home {
+    width: 90%;
+}
+
+.home__logo {
+    width: 100%;
+}
+
+.home__title {
+    font-size: var(--text-4xl);
+    line-height: var(--leading-10);
+    font-weight: var(--extrabold);
+}
+
+.home__subtitle {
+    font-size: var(--text-2xl);
+    line-height: var(--leading-8);
+    font-weight: var(--bold);
+}
+
+.home__name {
+    font-size: var(--text-xl);
+    line-height: var(--leading-8);
+    font-weight: var(--semibold);
+}
+
+.home>.navigation {
+    margin-top: var(--spacing-4);
+}
+
+.home>.navigation ul {
+    justify-content: center;
+}

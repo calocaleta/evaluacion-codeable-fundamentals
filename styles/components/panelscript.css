@@ -1,0 +1,114 @@
+.panel-script {
+    margin-top: var(--spacing-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    border-radius: var(--rounded-lg);
+    border-color: var(--gray-secondary);
+    border-style: solid;
+    border-width: 1px;
+    background-color: var(--gray-secondary);
+    padding: var(--spacing-5);
+    box-shadow:
+        0px 1px 10px rgb(0 0 0 / 10%),
+        1px 1px 2px rgb(0 0 0 / 20%);
+
+    min-height: var(--spacing-36);
+}
+
+.panel-script button {
+    background-color: var(--button-foreground);
+    color: var(--button-textcolor);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: var(--rounded-md);
+    border-width: 0px;
+    font-size: var(--text-sm);
+    letter-spacing: 1px;
+}
+
+.panel-script button:hover {
+    background-color: var(--button-foreground-hover);
+}
+
+.panel-script button:disabled,
+.panel-script button:disabled:hover {
+    background-color: var(--button-disabled);
+    cursor: not-allowed;
+}
+
+.panel-script__tooltip {
+    position: absolute;
+    background-color: var(--white-primary);
+    color: var(--foreground);
+    padding: var(--spacing-1);
+    border-radius: var(--rounded-md);
+    border-width: 1px;
+    font-size: var(--text-xs);
+
+    box-shadow:
+        0px 1px 10px rgb(0 0 0 / 10%),
+        0px 4px 4px rgb(0 0 0 / 20%);
+    margin-bottom: var(--spacing-1);
+}
+
+/* Para fornularios dentro de panel-script */
+
+.panel-script__form {
+    background-color: var(--white-primary);
+    border-radius: var(--rounded-lg);
+    padding: 0 var(--spacing-4);
+    width: 330px;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.panel-script__fieldset {
+    display: flex;
+    flex-direction: column;
+    border: 0px;
+}
+
+.panel-script__label {
+    margin-top: var(--spacing-4);
+}
+
+.panel-script__help-text {
+    margin-top: var(--spacing-1);
+    color: var(--danger-border);
+    font-size: var(--text-sm);
+    line-height: var(--leading-5);
+    font-weight: var(--regular);
+    display: none;
+}
+
+.panel-script__input,
+.panel-script__textarea {
+    margin-top: var(--spacing-2);
+    border: 1px solid var(--border-color);
+    border-radius: var(--rounded-md);
+    min-height: 40px;
+    padding: var(--spacing-2) var(--spacing-3);
+}
+
+.panel-script__button {
+    margin: var(--spacing-5) 0;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: var(--answer-color);
+    outline: none;
+}
+
+.panel-script__response {
+    width: 100%;
+    text-align: left;
+    display: none;
+}
